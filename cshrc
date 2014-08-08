@@ -47,7 +47,7 @@ if ($?prompt) then
 endif
 
 if (-d $HOME/.csh) then
-    foreach f ( `ls $HOME/.csh/*.rc` )
+    foreach f ( `/bin/ls $HOME/.csh/*.rc` )
         # echo -n "loading $f..."
         source $f
         # echo done
