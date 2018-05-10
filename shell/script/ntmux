@@ -1,0 +1,39 @@
+#!/bin/sh
+
+tmux=`which tmux`
+
+if [ "$tmux" = "" ]
+then
+    echo tmux not found
+    exit
+fi
+
+session_name=`hostname -s`
+force=
+
+while getopts f opt
+do
+    case $opt in
+        f)
+            force=1
+            ;;
+    esac
+done
+
+i=1
+while [ $i -lt $OPTIND ]
+do
+    shift
+    i=`expr 1 + $i`
+done
+
+if [ "$force" == "" ]
+then
+    if [ "$TMUX" != "" ]
+    then
+        echo not running $0 inside a tmux session
+        exit
+    fi
+fi
+
+$tmux attach -t ${session_name} || $tmux new-session -s ${session_name} -c $HOME
