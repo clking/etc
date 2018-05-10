@@ -1,0 +1,31 @@
+[color]
+	log = auto
+	branch = auto
+	diff = auto
+	status = auto
+	ui = true
+[alias]
+	bc = branch --column
+	ln = log --name-status
+	cne = commit --no-edit
+	mne = merge --no-edit
+	head = log --name-status -1
+	l1 = log -1 --pretty=oneline
+	save = commit -am draft
+	bv = branch -v
+	mnef = merge --no-ff --no-edit
+[user]
+	name = clk
+	email = clk@example.com
+[push]
+	default = simple
+[pull]
+	rebase = preserve
+[log]
+	date = local
+[blame]
+	date = local
+[core]
+	pager = less -FX
+[merge]
+	log = 25
