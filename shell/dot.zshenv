@@ -1,0 +1,10 @@
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+
+export EDITOR=vim
+
+export PAGER='less -FX'
+
+HIST_IGNORE_SPACE=1
+HIST_NO_STORE=1
+HIST_NO_FUNCTIONS=1
