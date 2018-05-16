@@ -12,11 +12,12 @@ mkdir $HOME/.zsh
 rm -f $HOME/.zshrc
 cd $HOME/.zsh
 i=0
-for file in $source/shell/dot.zsh/*
+for file in $source/shell/dot.zsh/*.zsh
 do
     index=`printf %02d $i`
-    ln -s $file $index.$file
-    (( i = 1 + $i ))
+    base=`basename $file`
+    ln -s $file $index.$base
+    i=`expr 1 + $i`
 done
 
 cd $HOME
