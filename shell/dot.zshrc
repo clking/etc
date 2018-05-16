@@ -84,7 +84,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 echo sourcing locally defined files
-for file in $HOME/.zsh/[0-9][0-9].*
+for file in $HOME/.zsh/[0-9][0-9].*.zsh
 do
     # echo sourcing $file
     source $file

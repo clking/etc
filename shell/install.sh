@@ -11,9 +11,12 @@ mkdir $HOME/.zsh
 
 rm -f $HOME/.zshrc
 cd $HOME/.zsh
+i=0
 for file in $source/shell/dot.zsh/*
 do
-    ln -s $file
+    index=`printf %02d $i`
+    ln -s $file $index.$file
+    (( i = 1 + $i ))
 done
 
 cd $HOME
