@@ -19,6 +19,7 @@ do
     ln -s $file $index.$base
     i=`expr 1 + $i`
 done
+touch 99.local.zsh
 
 cd $HOME
 for file in $source/config/*
