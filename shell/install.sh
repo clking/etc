@@ -3,13 +3,13 @@
 cd $HOME
 source=$HOME/src/github/etc
 
+rm -f $HOME/.zshrc
 ln -s $source/shell/dot.make.conf .make.conf
 ln -s $source/shell/dot.zshenv .zshenv
 ln -s $source/shell/dot.zshrc .zshrc
 ln -s $HOME/.oh-my-zsh oh-my-zsh
 mkdir $HOME/.zsh
 
-rm -f $HOME/.zshrc
 cd $HOME/.zsh
 i=0
 for file in $source/shell/dot.zsh/*.zsh
