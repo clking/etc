@@ -29,3 +29,5 @@
 	pager = less -FX
 [merge]
 	log = 25
+[http]
+	cookiefile = /home/clk/.gitcookies
